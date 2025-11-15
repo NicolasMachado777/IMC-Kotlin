@@ -348,26 +348,6 @@ Além da pasta `app/` (onde está o código principal), a raiz do projeto Androi
 
 ## 2) `Theme.kt` (tema Material 3 + Dynamic Color)
 
-*   `package ...ui.theme` Define o **pacote** do arquivo (organização do projeto).
-
-*   `import android.os.Build` Importa a classe **Build** para consultar a versão do Android em runtime.
-
-*   `import androidx.compose.foundation.isSystemInDarkTheme` Função Compose que diz se o sistema está em **tema escuro**.
-
-*   `import androidx.compose.material3.MaterialTheme` Componente que aplica o **tema Material 3** ao conteúdo.
-
-*   `import androidx.compose.material3.darkColorScheme` Cria um **esquema de cores** para modo **escuro**.
-
-*   `import androidx.compose.material3.dynamicDarkColorScheme` Cria esquema **dinâmico** escuro (Material You, Android 12+).
-
-*   `import androidx.compose.material3.dynamicLightColorScheme` Cria esquema **dinâmico** claro (Material You, Android 12+).
-
-*   `import androidx.compose.material3.lightColorScheme` Cria um **esquema de cores** para modo **claro**.
-
-*   `import androidx.compose.runtime.Composable` Marca funções que **compõem UI**.
-
-*   `import androidx.compose.ui.platform.LocalContext` Permite acessar o **Context** Android atual dentro do Compose.
-
 *   `private val DarkColorScheme = darkColorScheme(... )` Define o **esquema de cores do modo escuro** usando `Purple80`, `PurpleGrey80` e `Pink80` como cores primária, secundária e terciária, respectivamente (essas cores vêm do `Color.kt`).
 
 *   `private val LightColorScheme = lightColorScheme(... )` Define o **esquema de cores do modo claro** com `Purple40`, `PurpleGrey40` e `Pink40`. O comentário abaixo mostra outras cores que **poderiam** ser sobrescritas.
@@ -391,18 +371,6 @@ Além da pasta `app/` (onde está o código principal), a raiz do projeto Androi
 
 ## 3) `Type.kt` (tipografia Material 3)
 
-*   `package ...ui.theme` Define o **pacote**.
-
-*   `import androidx.compose.material3.Typography` Classe de **tipografia** do Material 3.
-
-*   `import androidx.compose.ui.text.TextStyle` Representa um **estilo de texto** (tamanho, altura da linha, etc.).
-
-*   `import androidx.compose.ui.text.font.FontFamily` Define a **família** da fonte.
-
-*   `import androidx.compose.ui.text.font.FontWeight` Define o **peso** da fonte (Normal, Bold, etc.).
-
-*   `import androidx.compose.ui.unit.sp` Unidade **sp** (escala independente) para fontes.
-
 *   `val Typography = Typography( bodyLarge = TextStyle(...) )` Cria a **instância** de tipografia do app:
     *   `fontFamily = FontFamily.Default` Usa a **fonte padrão** do sistema.
     *   `fontWeight = FontWeight.Normal` Peso **normal**.
@@ -410,15 +378,9 @@ Além da pasta `app/` (onde está o código principal), a raiz do projeto Androi
     *   `lineHeight = 24.sp` **Altura de linha** para legibilidade.
     *   `letterSpacing = 0.5.sp` **Espaçamento** entre caracteres.
 
-*   O comentário abaixo mostra exemplos de como **sobrescrever** outros estilos (ex.: `titleLarge`, `labelSmall`) caso necessário.
-
 ***
 
 ## 4) `CalculoImc.kt` (regras de negócio do IMC)
-
-*   `package nicolasmachado777.com.github.android_imc_app` Define o **pacote** do arquivo.
-
-*   `import kotlin.math.pow` Importa a função `pow` para fazer **potenciação** em `Double`.
 
 *   `fun calcularImc(altura: Double, peso: Double): Double` Função **pura** que calcula o IMC.
     *   **Importante**: a **altura** é recebida em **centímetros**.
@@ -462,12 +424,6 @@ Além da pasta `app/` (onde está o código principal), a raiz do projeto Androi
 ***
 
 ## 6) `ExampleUnitTest.kt` (teste local/JVM)
-
-*   `package nicolasmachado777.com.github.android_imc_app` Define o **pacote** do teste.
-
-*   `import org.junit.Test` Importa a anotação `@Test`.
-
-*   `import org.junit.Assert.*` Importa funções de **asserção** do JUnit (ex.: `assertEquals`).
 
 *   `/** ... */` Comentário de documentação dizendo que é um **teste local** (roda na **JVM** do computador) e inclui um link da documentação.
 
